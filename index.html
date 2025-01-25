@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Appointments</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Clinical Appointments</h1>
+    </header>
+    <main>
+      <section id="appointment-form">
+        <form id="add-appointment">
+          <label for="patient-name">Patient Name:</label>
+          <input type="text" id="patient-name" required />
+
+          <label for="patient-age">Age:</label>
+          <input type="number" id="patient-age" required />
+
+          <label for="patient-sex">Sex:</label>
+          <select id="patient-sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <label for="coverage">Coverage:</label>
+          <input type="text" id="coverage" required />
+
+          <label for="referring-dr">Referring Doctor:</label>
+          <input type="text" id="referring-dr" required />
+
+          <label for="case-description">Case Description (Optional):</label>
+          <textarea id="case-description"></textarea>
+
+          <label for="appointment-date">Appointment Date:</label>
+          <input type="datetime-local" id="appointment-date" required />
+
+          <label for="additional-notes">Additional Notes (Optional):</label>
+          <textarea id="additional-notes"></textarea>
+
+          <button type="submit">Add Appointment</button>
+        </form>
+      </section>
+
+      <section id="appointment-schedule">
+        <h2>Appointments Schedule</h2>
+        <input type="text" id="search" placeholder="Search by name or date" />
+        <table id="appointments-table">
+          <thead>
+            <tr>
+              <th>Patient Name</th>
+              <th>Age</th>
+              <th>Sex</th>
+              <th>Coverage</th>
+              <th>Referring Doctor</th>
+              <th>Case Description</th>
+              <th>Appointment Date</th>
+              <th>Additional Notes</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Appointments will appear here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
